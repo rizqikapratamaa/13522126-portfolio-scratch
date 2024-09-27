@@ -1,0 +1,356 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #fff;
+    color: #333;
+    min-height: 200vh;
+}
+
+.navbar {
+    background-color: #f0f0f0;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+
+}
+
+section {
+    margin-top: 20px;
+}
+
+h2, h3 {
+    color: #333;
+    text-transform: uppercase;
+    margin: 10px;
+}
+
+.navbar a{
+    color: black;
+    text-decoration: none;
+    padding: 14px 20px;
+}
+
+.navbar a{
+    border-bottom: 2px solid;
+    transition: border-color 0.3s ease;
+}
+
+.navbar h2 {
+    font-weight: 600;
+}
+
+.section {
+    padding: 20px;
+    margin: 20px auto;
+
+}
+
+.profile {
+    justify-content: space-between;
+    display: flex;
+    margin-top: 30px;
+    border: 2px solid;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.profile div {
+    border-color: black;
+    border: 2px solid;
+    flex: 1;
+    margin: 10px;
+}
+
+.profile .text-content {
+    flex: 1;
+    padding-right: 20px;
+    padding-left: 20px;
+    justify-content: center;
+    font-size: 1.1em;
+}
+
+.profile .image-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.profile img {
+    max-width: 100%;
+    height: 400px;
+    border-radius: 50%;
+    
+}
+
+.experience {
+    justify-content: space-between;
+    /* display: flex; */
+    margin-top: 50px;
+    border: 2px solid;
+}
+
+.experience-out{
+    border-color: black;
+    border: 2px solid;
+    margin: 5px;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.projects {
+    justify-content: space-between;
+    border: 2px solid;
+    margin-top: 30px;
+}
+
+.projects-out{
+    justify-content: space-between;
+    border: 2px solid;
+    margin: 5px;
+    text-align: center;
+}
+
+.publications {
+    justify-content: space-between;
+    border: 2px solid;
+    margin-top: 30px;
+}
+
+.publications-out {
+    justify-content: space-between;
+    border: 2px solid;
+    margin: 5px;
+    text-align: center;
+}
+
+.experience-contents,
+.projects-contents,
+.publications-contents {
+    justify-content: space-between;
+    display: flex;
+}
+
+.experience-contents div,
+.projects-contents div,
+.publications-contents div {
+    flex: 1 1 calc(50% - 20px);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.experience-contents p, 
+.projects-contents p, 
+.publications-contents p {
+    font-size: 0.9em;
+}
+
+.connect{
+    text-align: center;
+    padding: 50px;
+}
+
+.connect p {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.connect h3 {
+    margin-bottom: 20px;
+}
+
+.connect-out {
+    justify-content: space-between;
+    border: 2px solid;
+    margin: 5px;
+}
+
+.connect-contents {
+    justify-content: space-between;
+    display: flex;
+}
+
+.connect-contents div {
+    justify-content: space-between;
+    border: 2px solid;
+    margin-right: 3px;
+}
+
+.social-icons img {
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    .profile {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .experience-contents, .projects-contents, .publications-contents {
+        flex-direction: column;
+    }
+
+    .experience-contents div, .projects-contents div, .publications-contents div {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .particle-container {
+        display: none;
+    }
+}
+
+.particle-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.particle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #333;
+    border-radius: 50%;
+    animation: moveParticle 10s infinite ease-in-out;
+    opacity: 0.8;
+}
+
+@keyframes moveParticle {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    25% {
+        transform: translateX(200px) translateY(-100px);
+    }
+    50% {
+        transform: translateX(-150px) translateY(200px);
+    }
+    75% {
+        transform: translateX(250px) translateY(150px);
+    }
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+}
+
+.particle:nth-child(1) {
+    top: 5%;
+    left: 15%;
+    animation-duration: 8s;
+}
+
+.particle:nth-child(2) {
+    top: 25%;
+    left: 50%;
+    animation-duration: 12s;
+    animation-delay: 1s;
+}
+
+.particle:nth-child(3) {
+    top: 40%;
+    left: 30%;
+    animation-duration: 15s;
+    animation-delay: 2s;
+}
+
+/* Partikel lebih rendah */
+.particle:nth-child(4) {
+    top: 60%;
+    left: 80%;
+    animation-duration: 11s;
+}
+
+.particle:nth-child(5) {
+    top: 75%;
+    left: 20%;
+    animation-duration: 9s;
+    animation-delay: 0.5s;
+}
+
+.particle:nth-child(6) {
+    top: 85%;
+    left: 70%;
+    animation-duration: 10s;
+}
+
+.particle:nth-child(7) {
+    top: 95%;
+    left: 10%;
+    animation-duration: 14s;
+    animation-delay: 1.5s;
+}
+
+.particle:nth-child(8) {
+    top: 15%;
+    left: 40%;
+    animation-duration: 13s;
+}
+
+.particle:nth-child(9) {
+    top: 50%;
+    left: 60%;
+    animation-duration: 8s;
+    animation-delay: 2s;
+}
+
+.particle:nth-child(10) {
+    top: 85%;
+    left: 90%;
+    animation-duration: 16s;
+}
+
+.particle:nth-child(11) {
+    top: 10%;
+    left: 70%;
+    animation-duration: 7s;
+    animation-delay: 1.3s;
+}
+
+.particle:nth-child(12) {
+    top: 30%;
+    left: 10%;
+    animation-duration: 9s;
+    animation-delay: 1.8s;
+}
+
+.particle:nth-child(13) {
+    top: 50%;
+    left: 40%;
+    animation-duration: 10s;
+    animation-delay: 2.5s;
+}
+
+.particle:nth-child(14) {
+    top: 70%;
+    left: 60%;
+    animation-duration: 12s;
+    animation-delay: 3s;
+}
